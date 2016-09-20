@@ -5,8 +5,18 @@ $(document).ready(function(){
 function createGradient(){
   var canvas = $('#gradient_canvas').get(0);
   var context = canvas.getContext("2d");
+
+  var width = canvas.width;
+  var height = canvas.height;
+  var gradient = context.createLinearGradient(0,0,width,height);
+  gradient.addColorStop(0,"#01020c");
+  gradient.addColorStop(0.33,"#71c9f1");
+  gradient.addColorStop(0.5,"#FFCD05");
+  gradient.addColorStop(0.66,"#336699");
+  gradient.addColorStop(1,"#01020c");
+  context.fillStyle=gradient;
+  context.fillRect(0,0,width,height);
   var t = setInterval(createTime,500);
-  
 }
 
 function createTime(){

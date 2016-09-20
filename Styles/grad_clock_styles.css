@@ -11,3 +11,13 @@
   left: 0;
   z-index: 0;
 }
+.time{
+  font-size: 50px;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+
+}

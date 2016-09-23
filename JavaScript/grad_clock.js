@@ -23,7 +23,7 @@ var createGradient = function(){
   context.fillStyle=gradient;
   context.fillRect(0,0,width,height);
   var t = setInterval(createTime,500);
-}
+};
 
 var createTime = function(){
   var now = new Date();
@@ -35,12 +35,12 @@ var createTime = function(){
   var time = h+":"+m+":"+s;
   $('.time').text(time);
   return time;
-}
+};
 
 var checkTime = function(i){
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
-}
+};
 
 var render = function(){
   context.clearRect(0,0,canvas.width, canvas.height);
@@ -49,7 +49,7 @@ var render = function(){
   context.fillStyle = circle.fill;
   context.fill();
   requestAnimationFram(render);
-}
+};
 
 var requestAnimationFrame =
         window.requestAnimationFrame ||
@@ -62,4 +62,4 @@ var requestAnimationFrame =
         };
 var animate = function(prop, val, duration){
 
-}
+};

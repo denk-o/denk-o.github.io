@@ -1,7 +1,3 @@
-$(document).ready(function(){
-  createGradient();
-});
-
 var circle = {
   'x': 50,
   'y': 50,
@@ -63,3 +59,7 @@ var requestAnimationFrame =
 var animate = function(prop, val, duration){
 
 };
+
+$(document).ready(function(){
+  createGradient();
+});

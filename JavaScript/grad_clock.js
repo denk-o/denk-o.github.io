@@ -5,9 +5,9 @@ $(document).ready(function(){
 var circle = {
   'x': 50,
   'y': 50,
-  'radius': 100
+  'radius': 100,
   'fill': '#000000'
-}
+};
 var canvas = $('#gradient_canvas').get(0);
 var context = canvas.getContext("2d");
 

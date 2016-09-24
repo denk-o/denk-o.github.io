@@ -1,3 +1,18 @@
+window.addEventListener("resize", resizeCanvas, false);
+
+function resizeCanvas(e) {
+  var myCanvas = document.getElementById("circle_canvas");
+  var width = document.documentElement.clientWidth;
+  var height = document.documentElement.clientHeight;
+  myCanvas.width = width;
+  myCanvas.height = height;
+  circle['x'] = width/2;
+  console.log(circle.x);
+  circle['y'] = height*.75;
+  circle['radius'] = width/3;
+  init();
+};
+
 $(document).ready(function(){
   createTime();//call oncce to pre render
   var t = setInterval(createTime,500);
@@ -5,10 +20,10 @@ $(document).ready(function(){
 });
 
 var circle = {
-  'x': 110,
-  'y': 750,
-  'radius': 100,
-  'fill': 'yellow'
+  'x': $(window).width()/2,
+  'y': $(window).height()*.75,
+  'radius': $(window).width()/3,
+  'color': 'yellow'
 };
 
 var createTime = function(){
@@ -31,8 +46,8 @@ var checkTime = function(i){
 var init = function(){
   var canvas = $('#circle_canvas').get(0);
   var context = canvas.getContext("2d");
-  canvas.width = $('#circle_canvas').parent().width();
-  canvas.height = $('#circle_canvas').parent().height();
+  canvas.width = $('#circle_canvas').parent().innerWidth();
+  canvas.height = $('#circle_canvas').parent().innerHeight();
   var width = canvas.width;
   var height = canvas.height;
   // var gradient = context.createLinearGradient(0,0,width,height);
@@ -44,7 +59,7 @@ var init = function(){
   // context.fillStyle=gradient;
   // context.fillRect(0,0,width,height);
   render();
-  //animate('x',0,1000);
+  //animate('x',500,1000);
 };
 
 
@@ -54,10 +69,10 @@ var render = function(){
   //draw the canvas circle based on initial start time
   context.clearRect(0,0,canvas.width, canvas.height);
   context.beginPath();
-  context.arc(circle.x, circle.y, circle.radius,0,2*Math.PI);
-  context.fillStyle = circle.fill;
-  //context.stroke();
-  context.fill();
+  context.arc(circle.x, circle.y, circle.radius,0,Math.PI,true);
+  context.lineWidth=15;
+  context.strokeStyle = circle.color;
+  context.stroke();
   //requestAnimationFrame(render);
 };
 

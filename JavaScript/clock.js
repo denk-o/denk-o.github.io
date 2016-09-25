@@ -58,6 +58,7 @@ var init = function(){
   // gradient.addColorStop(1,"#01020c");
   // context.fillStyle=gradient;
   // context.fillRect(0,0,width,height);
+
   render();
   var r = setInterval(render,1000);
   //animate('x',500,1000);
@@ -83,7 +84,7 @@ var updateArc = function(){
   var currSeconds = s+(60*m)+(3600*h);
   var ratio = (currSeconds-offset)/halfDay;
   circle.endAngle = (ratio+1)*Math.PI;
-  console.log(circle.endAngle);
+  //console.log(circle.endAngle);
 };
 
 
@@ -103,6 +104,11 @@ var render = function(){
   context.lineWidth = 15;
   context.strokeStyle = 'black';
   context.stroke();
+  // context.beginPath();
+  // context.arc(circle.x, circle.y, circle.radius+20,-Math.PI*.75,-Math.PI*.80, true);
+  // context.lineWidth=15;
+  // context.strokeStyle = 'green';
+  // context.stroke();
   //requestAnimationFrame(render);
 };
 

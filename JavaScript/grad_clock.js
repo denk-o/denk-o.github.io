@@ -8,7 +8,7 @@ function resizeCanvas(e) {
   myCanvas.height = height;
   circle['x'] = width/2;
   circle['y'] = height*.75;
-  circle['radius'] = width/3;//radius is only dependent on width currently
+  circle['radius'] = width/4;//radius is only dependent on width currently
   init();
 };
 
@@ -21,7 +21,7 @@ $(document).ready(function(){
 var circle = {
   'x': $(window).width()/2,
   'y': $(window).height()*.75,
-  'radius': $(window).width()/3,
+  'radius': $(window).width()/4,
   'color': 'yellow',
   'endAngle': 0//in radians
 };
@@ -83,7 +83,7 @@ var updateArc = function(){
   var currSeconds = s+(60*m)+(3600*h);
   var ratio = (currSeconds-offset)/halfDay;
   circle.endAngle = (ratio+1)*Math.PI;
-  
+  console.log(circle.endAngle);
 };
 
 

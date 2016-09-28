@@ -1,0 +1,17 @@
+.menu_container{
+  margin: 0px;
+  height: 5%;
+  width: 100%;
+  background-color: #c4a8d6;
+  padding-left: 3%;
+  /*margin-left: 3%;*/
+}
+.menu_item{
+  border: 2px solid black;
+  height:100%;
+  background-color: inherit;
+
+}
+.menu_item:hover{
+  background-color: #ddb8f5;
+}

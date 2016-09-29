@@ -12,6 +12,27 @@
   background-color: inherit;
 
 }
-.menu_item:hover{
-  background-color: #ddb8f5;
+.projects_menu{
+  height: 100%;
+  width: 100%;
+}
+.projects_menu:hover .dropdown-content{
+  display: block;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content li{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content li:hover{
+  background-color: #f1f1f1
 }

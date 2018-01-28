@@ -2,8 +2,12 @@
 layout: default
 ---
 
-# [](#header-1)Header 1
+# [](#header-1)My Work
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Basic site made using github templates to include some simple web development projects.
 
-PROJECTS * [Buckets](https://denk-o.github.io/buckets) * [Clock Circle](https://denk-o.github.io/clock_circle) * [Steebchamp.io](https://denk-o.github.io/steebchamp.io)
+PROJECTS
+ * [Buckets](https://denk-o.github.io/buckets)  
+ * [Clock Circle](https://denk-o.github.io/clock_circle)
+ * [Steebchamp.io](https://denk-o.github.io/steebchamp.io)
+  -The webservice used for this project no longer works
